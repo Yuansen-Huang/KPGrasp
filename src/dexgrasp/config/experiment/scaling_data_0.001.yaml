@@ -1,0 +1,4 @@
+# @package _global_
+exp_name: scaling_data_0.001_train
+data:
+  grasp_fraction: 0.001

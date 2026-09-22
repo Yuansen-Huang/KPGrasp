@@ -1,0 +1,34 @@
+# Runtime output and local verification records
+/work/
+/output/
+/provenance/
+/release/
+/docs/CLEANUP_DIFF.md
+/docs/CODE_DIFF.patch
+/docs/IK_FROM_DEXGRASPBENCH.patch
+
+# Model weights and datasets are distributed separately
+/checkpoints/
+/assets/dexonomy/
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# Python, environments and build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+/build/
+/dist/
+/.venv/
+/venv/
+.pytest_cache/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store

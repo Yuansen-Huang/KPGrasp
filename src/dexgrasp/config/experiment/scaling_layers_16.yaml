@@ -1,0 +1,6 @@
+# @package _global_
+exp_name: scaling_layers_16_train
+algo:
+  model:
+    policy:
+      depth: 16

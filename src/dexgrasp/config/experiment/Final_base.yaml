@@ -1,0 +1,15 @@
+# @package _global_
+exp_name: Final_base_train
+algo:
+  model:
+    name: KeyPointGraspModel
+    single_token: false
+    policy:
+      depth: 8
+    flow:
+      name: FlowMatch
+      pred_mode: v
+      solver_type: Euler
+      sample_step: 5
+  loss_weight:
+    loss_fm: 1.0

@@ -1,0 +1,84 @@
+output_folder: ${project_root}/output
+data_folder: ${oc.env:DEXONOMY_DATA,${project_root}/assets/dexonomy}
+exp_folder: experiment
+exp_name: Final_lsd3
+ckpt: ${project_root}/checkpoints/Final_lsd3/step_200000.pth
+resume: false
+seed: 0
+device: cuda:0
+data_name: kdex
+algo_name: mink
+hand_name: shadow
+wandb:
+  folder: ${output_folder}
+  group: ${hand_name}_${data_name}
+  id: ${hand_name}_${data_name}_${exp_name}
+  mode: disabled
+  project: KPGrasp
+  resume: ${resume}
+hand:
+  urdf_path: null
+  n_joint: 22
+  n_kp: 28
+algo:
+  batch_size: 4
+  max_iter: 200000
+  opt: muon
+  lr: 0.0002
+  lr_min: 2.0e-05
+  log_every: 100
+  val_every: 5000
+  val_num: 10
+  save_every: 50000
+  grad_clip: 10.0
+  test_grasp_num: 100
+  test_topk: 10
+  vis_attn: false
+  warmup: true
+  model:
+    name: KeyPointGraspModel
+    exp_name: ${exp_name}
+    hand_name: ${hand_name}
+    data_name: ${data_name}
+    backbone:
+      name: WrappedMinkUNet_coord
+      in_feat_dim: 3
+      out_feat_dim: 512
+      token_length: 128
+      voxel_size: 0.005
+    policy:
+      name: DiT
+      in_feat_dim: ${..backbone.out_feat_dim}
+      n_kp: ${....hand.n_kp}
+      n_frame: ${....data.n_frame}
+      depth: 16
+      num_heads: 8
+      hidden_size: ${..backbone.out_feat_dim}
+      use_global_feat: true
+    flow:
+      name: FlowMap
+      pred_mode: v
+      solver_type: Euler
+      sample_step: 1
+    single_token: false
+  loss_weight:
+    loss_fm: 1.0
+    loss_consis: 0.33
+data:
+  num_workers: 16
+  num_points: 1024
+  n_frame: 3
+  pre_load: true
+  index_path: ${data_folder}/dex_kp_h5/index_obj_grasp.json
+  grasp_path: ${data_folder}/dex_kp_h5
+  object_path:
+  - ${data_folder}/object/DGN_5k
+  - ${data_folder}/object/objaverse_5k
+  split_path: valid_split
+  pc_path: vision_data/complete_point_cloud
+  test_split: test
+  test_scene_cfg: floating/**.npy
+  mini_test: false
+  grasp_fraction: 1.0
+  subset_seed: 0
+project_root: ${oc.env:KPGRASP_ROOT}

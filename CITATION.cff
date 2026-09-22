@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use KPGrasp, please cite the accompanying paper."
+title: "KPGrasp: Scalable Keypoint Flow Matching for Dexterous Grasp Generation"
+type: software
+license: CC-BY-NC-4.0
+authors:
+  - family-names: Huang
+    given-names: Yuansen
+  - family-names: Chen
+    given-names: Jiayi
+  - family-names: Liu
+    given-names: Haoran
+  - family-names: Ke
+    given-names: Yubin
+  - family-names: Han
+    given-names: Bing
+  - family-names: Lyu
+    given-names: Jiangran
+  - family-names: Yan
+    given-names: Mi
+  - family-names: Yi
+    given-names: Li
+  - family-names: Wang
+    given-names: He
+preferred-citation:
+  type: article
+  title: "KPGrasp: Scalable Keypoint Flow Matching for Dexterous Grasp Generation"
+  journal: arXiv
+  year: 2026
+  doi: 10.48550/arXiv.2606.09314
+  url: https://arxiv.org/abs/2606.09314
+  authors:
+    - family-names: Huang
+      given-names: Yuansen
+    - family-names: Chen
+      given-names: Jiayi
+    - family-names: Liu
+      given-names: Haoran
+    - family-names: Ke
+      given-names: Yubin
+    - family-names: Han
+      given-names: Bing
+    - family-names: Lyu
+      given-names: Jiangran
+    - family-names: Yan
+      given-names: Mi
+    - family-names: Yi
+      given-names: Li
+    - family-names: Wang
+      given-names: He

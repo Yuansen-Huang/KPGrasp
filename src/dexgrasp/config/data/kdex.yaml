@@ -1,0 +1,16 @@
+num_workers: 16
+num_points: 1024
+n_frame: 3
+pre_load: true
+index_path: ${data_folder}/dex_kp_h5/index_obj_grasp.json
+grasp_path: ${data_folder}/dex_kp_h5
+object_path:
+- ${data_folder}/object/DGN_5k
+- ${data_folder}/object/objaverse_5k
+split_path: valid_split
+pc_path: vision_data/complete_point_cloud
+test_split: test
+test_scene_cfg: floating/**.npy
+mini_test: false
+grasp_fraction: 1.0
+subset_seed: 0

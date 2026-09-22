@@ -1,0 +1,29 @@
+output_folder: ${project_root}/output
+data_folder: ${oc.env:DEXONOMY_DATA,${project_root}/assets/dexonomy}
+exp_folder: experiment
+exp_name: Final_base_train
+ckpt: null
+resume: false
+seed: 0
+device: cuda:0
+defaults:
+- hand: shadow
+- algo: mink
+- data: kdex
+- _self_
+data_name: kdex
+algo_name: mink
+hand_name: shadow
+hydra:
+  run:
+    dir: ${...output_folder}/${...exp_folder}/${...hand_name}_${...data_name}_${...exp_name}
+  job:
+    chdir: false
+wandb:
+  folder: ${output_folder}
+  group: ${hand_name}_${data_name}
+  id: ${hand_name}_${data_name}_${exp_name}
+  mode: disabled
+  project: KPGrasp
+  resume: ${resume}
+project_root: ${oc.env:KPGRASP_ROOT}

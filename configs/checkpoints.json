@@ -1,0 +1,44 @@
+[
+  {
+    "experiment": "Final_base",
+    "path": "checkpoints/Final_base/step_200000.pth",
+    "step": 200000,
+    "bytes": 268924366,
+    "sha256": "fcf2af3f2e27bc53edb66fcd6b6675ce32313a3decc797ea9a0fd79dad2fb64c"
+  },
+  {
+    "experiment": "Final_RTJ",
+    "path": "checkpoints/Final_RTJ/step_200000.pth",
+    "step": 200000,
+    "bytes": 269248654,
+    "sha256": "6467fac75ac005692e330c869e684d9ca4d116e7c961498f03536e7625d8d97c"
+  },
+  {
+    "experiment": "Final_RTJ34token",
+    "path": "checkpoints/Final_RTJ34token/step_200000.pth",
+    "step": 200000,
+    "bytes": 268910350,
+    "sha256": "ee446a2c1c58592e4000c977585f4d8f77d79693e9561fb36c4962bde8154610"
+  },
+  {
+    "experiment": "Final_SE32",
+    "path": "checkpoints/Final_SE32/step_200000.pth",
+    "step": 200000,
+    "bytes": 495806666,
+    "sha256": "5e458021ea58b18bd36630559c8403f1e9b857f4333ce57c14713a5bb9695c0d"
+  },
+  {
+    "experiment": "Final_base_1token",
+    "path": "checkpoints/Final_base_1token/step_200000.pth",
+    "step": 200000,
+    "bytes": 269865358,
+    "sha256": "c121e13a077ab4ba5a4a9d59f5a637f874d8837224de2ccc7ec917fad0fc2b61"
+  },
+  {
+    "experiment": "Final_lsd3",
+    "path": "checkpoints/Final_lsd3/step_200000.pth",
+    "step": 200000,
+    "bytes": 479571374,
+    "sha256": "017406f7bf80234a7f1cd4af1b1122d57e003bad054485f4f04630e639381907"
+  }
+]

@@ -1,0 +1,18 @@
+# @package _global_
+exp_name: Final_SE32_train
+algo:
+  model:
+    name: SE3Model
+    single_token: false
+    policy:
+      depth: 8
+    flow:
+      name: SE3FlowMatch
+      pred_mode: v
+      solver_type: Euler
+      sample_step: 5
+      rt_sample_steps: 20
+      joint_sample_steps: 20
+  loss_weight:
+    loss_fm: 1.0
+    loss_joint: 1.0

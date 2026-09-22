@@ -1,0 +1,4 @@
+# @package _global_
+exp_name: scaling_batch_1_train
+algo:
+  batch_size: 1

@@ -1,0 +1,3 @@
+urdf_path:
+n_joint: 22
+n_kp: 28

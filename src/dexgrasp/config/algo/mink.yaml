@@ -1,0 +1,42 @@
+batch_size: 512
+max_iter: 200000
+opt: muon
+lr: 0.0002
+lr_min: 2.0e-05
+log_every: 100
+val_every: 5000
+val_num: 10
+save_every: 50000
+grad_clip: 10.0
+test_grasp_num: 100
+test_topk: 10
+vis_attn: false
+warmup: true
+model:
+  name: KeyPointGraspModel
+  exp_name: ${exp_name}
+  hand_name: ${hand_name}
+  data_name: ${data_name}
+  backbone:
+    name: WrappedMinkUNet_coord
+    in_feat_dim: 3
+    out_feat_dim: 512
+    token_length: 128
+    voxel_size: 0.005
+  policy:
+    name: DiT
+    in_feat_dim: ${..backbone.out_feat_dim}
+    n_kp: ${....hand.n_kp}
+    n_frame: ${....data.n_frame}
+    depth: 8
+    num_heads: 8
+    hidden_size: ${..backbone.out_feat_dim}
+    use_global_feat: true
+  flow:
+    name: FlowMatch
+    pred_mode: v
+    solver_type: Euler
+    sample_step: 5
+  single_token: false
+loss_weight:
+  loss_fm: 1.0

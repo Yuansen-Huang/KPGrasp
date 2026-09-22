@@ -1,0 +1,6 @@
+# Native libraries must match the selected PyTorch/CUDA build.
+torch==2.1.0
+torchvision==0.16.0
+MinkowskiEngine==0.5.4
+pytorch3d==0.7.8
+numpy==1.23.5

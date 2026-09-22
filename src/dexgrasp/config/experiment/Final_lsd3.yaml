@@ -1,0 +1,16 @@
+# @package _global_
+exp_name: Final_lsd3_train
+algo:
+  model:
+    name: KeyPointGraspModel
+    single_token: false
+    policy:
+      depth: 16
+    flow:
+      name: FlowMap
+      pred_mode: v
+      solver_type: Euler
+      sample_step: 1
+  loss_weight:
+    loss_fm: 1.0
+    loss_consis: 0.33

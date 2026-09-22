@@ -1,0 +1,3 @@
+# CPU-only configuration and release checks; no datasets or weights required.
+hydra-core==1.3.2
+omegaconf==2.3.0

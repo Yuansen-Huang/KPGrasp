@@ -119,7 +119,7 @@ def ik_sph(
     for i in range(5):
         vel = mink.solve_ik(configuration, kp_tasks, dt, "quadprog", 1e-5)
         configuration.integrate_inplace(vel, dt)
-        if vel.max() * dt < 0.1:
+        if abs(vel.max()) * dt < 0.1:
             break
     result_q = deepcopy(configuration.q)
     result = np.concatenate([result_pose, result_q])

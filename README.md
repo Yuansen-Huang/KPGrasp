@@ -3,8 +3,7 @@
 **Scalable Keypoint Flow Matching for Dexterous Grasp Generation**
 
 [Paper](https://arxiv.org/abs/2606.09314) · [Installation](docs/INSTALL.md) ·
-[Data](docs/DATA.md) · [Checkpoints](docs/CHECKPOINTS.md) ·
-[Experiments](docs/EXPERIMENTS.md)
+[Data](docs/DATA.md) · [Checkpoints](docs/CHECKPOINTS.md)
 
 KPGrasp generates dexterous grasps from object point clouds using a sparse
 point-cloud encoder and a Transformer flow model. This release retains the

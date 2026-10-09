@@ -12,10 +12,8 @@ point-cloud encoder and a Transformer flow model. This release retains the
 (pregrasp, grasp, squeeze). The main configuration uses **5 Euler steps**,
 generates **100 candidates**, and selects **10** by the retained ranking score.
 
-The main `Final_base` checkpoint is associated with a historical Dexonomy
-evaluation of **76.3% grasp success**. This is a recorded benchmark result,
-not a new evaluation of this release. See [experiment notes](docs/EXPERIMENTS.md)
-for the checkpoint mapping and implementation differences.
+The main `Final_base` checkpoint is associated with a Dexonomy
+evaluation of **76.3% grasp success**. 
 
 ## Included
 
@@ -89,8 +87,7 @@ python -B -m torch.distributed.run --nproc_per_node=8 \
 Replace `Final_base` with `Final_RTJ`, `Final_RTJ34token`, `Final_SE32`,
 `Final_base_1token`, or `Final_lsd3` for model ablations. The single-step
 FlowMap variant has its own configuration. W&B is disabled by default.
-Scaling configurations and historical reproducibility limits are described in
-[EXPERIMENTS.md](docs/EXPERIMENTS.md).
+
 
 Sampling without ranking uses the main checkpoint:
 

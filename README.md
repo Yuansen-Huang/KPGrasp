@@ -2,7 +2,7 @@
 
 **Scalable Keypoint Flow Matching for Dexterous Grasp Generation**
 
-CoRL 2026 Spotlight (https://Yuansen-Huang.github.io/KPGrasp-Page)
+CoRL 2026 Spotlight (https://yuansen-huang.github.io/KPGrasp-page)
 
 [Paper](https://arxiv.org/abs/2606.09314) · [Installation](docs/INSTALL.md) ·
 [Data](docs/DATA.md) · [Checkpoints](docs/CHECKPOINTS.md) 

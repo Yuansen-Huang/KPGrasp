@@ -21,7 +21,7 @@ hand:
   n_joint: 22
   n_kp: 28
 algo:
-  batch_size: 4
+  batch_size: 4096
   max_iter: 200000
   opt: muon
   lr: 0.0002

@@ -25,8 +25,7 @@ With help of recent LLMs, there may be some small code bugs. Fixing them may fur
 - Dexonomy training, sampling, and HDF5 packing utilities.
 - Keypoint-to-Shadow-Hand IK with wrist registration and joint optimization.
 
-The source archive includes the hand model, but **does not include dataset files
-or pretrained checkpoints**. All six pretrained checkpoints are available on
+The source archive includes the hand model, but **does not include dataset files**. All six pretrained checkpoints are available on
 [Hugging Face](https://huggingface.co/cstr-withyou/KPGrasp/tree/main/checkpoints).
 See the [checkpoint guide](docs/CHECKPOINTS.md) for file paths and SHA-256 checksums.
 

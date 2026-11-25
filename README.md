@@ -16,6 +16,8 @@ generates **100 candidates**, and selects **10** by the retained ranking score.
 The main `Final_base` checkpoint is associated with a Dexonomy
 evaluation of **76.3% grasp success**. 
 
+With help of recent LLMs, there may be some small code bugs. Fixing them may further improve training speed and performance.
+
 ## Included
 
 - Keypoint flow-matching model with MinkUNet and DiT.

@@ -24,8 +24,9 @@ evaluation of **76.3% grasp success**.
 - Keypoint-to-Shadow-Hand IK with wrist registration and joint optimization.
 
 The source archive includes the hand model, but **does not include dataset files
-or pretrained checkpoints**. Weight filenames and checksums are documented;
-public weight download URLs have not been assigned yet.
+or pretrained checkpoints**. All six pretrained checkpoints are available on
+[Hugging Face](https://huggingface.co/cstr-withyou/KPGrasp/tree/main/checkpoints).
+See the [checkpoint guide](docs/CHECKPOINTS.md) for file paths and SHA-256 checksums.
 
 ## Quick start
 
